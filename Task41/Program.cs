@@ -2,17 +2,17 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-int ReadData (string line)
+int ReadData(string line) //Вводим числа
 {
-Console.WriteLine(line);
-int number = int.Parse(Console.ReadLine()??"");
-return number;
+    Console.WriteLine(line);
+    int number = int.Parse(Console.ReadLine() ?? "");
+    return number;
 }
 
 
 int len = ReadData("Сколько чисел хотите ввести: ");
-int count = 0;
-int temp = 0;
+int count = 0; //задаем счетчик
+int temp = 0; //текущее число
 for (int i = 0; i < len; i++)
 {
     temp = ReadData("Введите число: ");
